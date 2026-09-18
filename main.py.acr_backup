@@ -641,7 +641,13 @@ def main():
     print("BASIC PROCESSING COMPLETED")
     print("=" * 70)
 
-    return database
+
+# ============================================================
+# APPLICATION START
+# ============================================================
+
+if __name__ == "__main__":
+    main()
 
 
 # ============================================================
@@ -796,6 +802,17 @@ def export_final_data(database):
 # INTENTIONALLY BROKEN EXECUTION SECTION
 # ============================================================
 
+print()
+print("=" * 70)
+print("STARTING ADVANCED HEALING TEST")
+print("=" * 70)
+
+
+# ERROR 1:
+# Missing colon after elif
+# This creates a SyntaxError and prevents the program from
+# executing until Gemini repairs it.
+
 def test_syntax_error(student):
 
     percentage = student.calculate_percentage()
@@ -803,19 +820,24 @@ def test_syntax_error(student):
     if percentage >= 90:
         return "Excellent"
 
-    elif percentage >= 80:
+    elif percentage >= 80
         return "Very Good"
 
     else:
         return "Needs Improvement"
 
 
+# ------------------------------------------------------------
+# The following functions contain additional errors.
+# They become reachable after the first error is repaired.
+# ------------------------------------------------------------
+
+
 def test_name_error(student):
 
     percentage = student.calculate_percentage()
 
-    # Fixed NameError
-    undefined_bonus = 0
+    # Intentional NameError
     result = percentage + undefined_bonus
 
     return result
@@ -825,8 +847,8 @@ def test_type_error(student):
 
     percentage = student.calculate_percentage()
 
-    # Fixed TypeError
-    result = str(percentage) + " percentage"
+    # Intentional TypeError
+    result = percentage + " percentage"
 
     return result
 
@@ -839,17 +861,17 @@ def test_key_error(student):
         "percentage": student.calculate_percentage()
     }
 
-    # Fixed KeyError
-    return data.get("name")
+    # Intentional KeyError
+    return data["student_email"]
 
 
 def test_zero_division():
 
-    total_students = 1
+    total_students = 0
 
     total_marks = 500
 
-    # Fixed ZeroDivisionError
+    # Intentional ZeroDivisionError
     average = total_marks / total_students
 
     return average
@@ -857,14 +879,19 @@ def test_zero_division():
 
 def test_attribute_error(student):
 
-    # Fixed AttributeError
-    return student.name
+    # Intentional AttributeError
+    return student.get_full_name()
 
 
 def test_file_error():
 
-    # Fixed FileNotFoundError
-    return {"status": "config_missing"}
+    # Intentional FileNotFoundError
+    with open(
+        "important_missing_configuration.json",
+        "r"
+    ) as file:
+
+        return json.load(file)
 
 
 # ============================================================
@@ -933,26 +960,18 @@ def run_healing_test(database):
 
 
 # ============================================================
-# APPLICATION START
+# END OF TEST FILE
 # ============================================================
 
-if __name__ == "__main__":
-    database = main()
+print_final_summary(database)
 
-    print()
-    print("=" * 70)
-    print("STARTING ADVANCED HEALING TEST")
-    print("=" * 70)
+advanced_analysis(database)
 
-    print_final_summary(database)
+export_final_data(database)
 
-    advanced_analysis(database)
+run_healing_test(database)
 
-    export_final_data(database)
-
-    run_healing_test(database)
-
-    print()
-    print("=" * 70)
-    print("ALL TESTS COMPLETED")
-    print("=" * 70)
+print()
+print("=" * 70)
+print("ALL TESTS COMPLETED")
+print("=" * 70)
