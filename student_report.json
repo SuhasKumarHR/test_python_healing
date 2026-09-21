@@ -1,0 +1,62 @@
+[
+    {
+        "id": 101,
+        "name": "Rahul",
+        "age": 21,
+        "department": "Computer Science",
+        "total": 439,
+        "average": 87.8,
+        "percentage": 87.8,
+        "grade": "A",
+        "result": "PASS",
+        "attendance": 85.0
+    },
+    {
+        "id": 102,
+        "name": "Priya",
+        "age": 20,
+        "department": "Computer Science",
+        "total": 449,
+        "average": 89.8,
+        "percentage": 89.8,
+        "grade": "A",
+        "result": "PASS",
+        "attendance": 92.0
+    },
+    {
+        "id": 103,
+        "name": "Arun",
+        "age": 22,
+        "department": "Information Science",
+        "total": 350,
+        "average": 70.0,
+        "percentage": 70.0,
+        "grade": "B",
+        "result": "PASS",
+        "attendance": 68.0
+    },
+    {
+        "id": 104,
+        "name": "Sneha",
+        "age": 21,
+        "department": "Computer Science",
+        "total": 475,
+        "average": 95.0,
+        "percentage": 95.0,
+        "grade": "A+",
+        "result": "PASS",
+        "attendance": 96.0
+    },
+    {
+        "id": 105,
+        "name": "Kiran",
+        "age": 20,
+        "department": "Electronics",
+        "total": 286,
+        "average": 57.2,
+        "percentage": 57.199999999999996,
+        "grade": "D",
+        "result": "PASS",
+        "attendance": 74.0
+    }
+]
